@@ -355,8 +355,10 @@ main {
 .hero {
   min-height: 85vh;
   display: flex;
-  align-items: center;
-  padding: var(--space-xxl) var(--space-lg);
+  align-items: flex-start;
+  justify-content: center;
+  /* Logo header’a yakın: üst boşluk küçük (main zaten --header-h veriyor) */
+  padding: 0.35rem var(--space-lg) var(--space-xxl);
   background: var(--color-white);
 }
 
@@ -373,7 +375,8 @@ main {
 .hero__banner {
   display: flex;
   justify-content: center;
-  margin-bottom: var(--space-xl);
+  margin-top: -0.25rem;
+  margin-bottom: var(--space-lg);
 }
 
 .hero__theme-img {
