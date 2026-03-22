@@ -1,0 +1,20 @@
+{
+  "name": "era-site",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "parcel index.html --host localhost --port 3000 --open",
+    "build": "parcel build index.html && node -e \"require('fs').cpSync('images','dist/images',{recursive:true})\""
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "not dead"
+  ]
+}
