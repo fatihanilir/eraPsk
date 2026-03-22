@@ -4,7 +4,6 @@ import { logoImg } from './assets/imageData';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import WhyEra from './components/WhyEra';
-import CalismaAlanlari from './components/CalismaAlanlari';
 import Contact from './components/Contact';
 import Randevu from './components/Randevu';
 
@@ -16,7 +15,6 @@ function App() {
         <Hero />
         <WhyEra />
         <Randevu />
-        <CalismaAlanlari />
         <Contact />
       </main>
       <footer className="site-footer">

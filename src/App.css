@@ -436,101 +436,23 @@ main {
   font-size: clamp(1.5rem, 3vw, 2rem);
   font-weight: 600;
   color: var(--color-text);
-  margin: 0 0 var(--space-lg);
+  margin: 0 0 0.35rem;
   text-align: center;
 }
 
-.why-era__images {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-lg);
-  margin-bottom: var(--space-xl);
-  align-items: center;
-  max-width: 720px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.why-era__img {
+/* Çalışma Alanları bu bölümün içinde; üst başlığa yakın */
+.why-era__calisma {
   width: 100%;
-  height: auto;
-  max-height: 220px;
-  object-fit: cover;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  margin-top: 0.25rem;
+  text-align: left;
 }
 
-.why-era__img--wide {
-  max-height: 200px;
-}
-
-@media (max-width: 768px) {
-  .why-era__images {
-    grid-template-columns: 1fr;
-  }
-}
-
-.why-era__grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-lg);
-  margin-bottom: var(--space-xl);
-  justify-content: center;
-}
-
-.why-era__card {
-  width: 280px;
-  min-height: 264px;
-  background: var(--color-white);
-  padding: var(--space-lg);
-  border-radius: var(--radius);
-  border: 1px solid var(--color-border);
-  box-shadow: var(--shadow);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  display: flex;
-  flex-direction: column;
-}
-
-.why-era__card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-}
-
-.why-era__card-emoji {
-  font-size: 2rem;
-  display: block;
-  margin-bottom: 0.75rem;
-}
-
-.why-era__card-title {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--color-text);
-  margin: 0 0 0.5rem;
-}
-
-.why-era__card-desc {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: var(--color-text-soft);
-  margin: 0;
-}
-
-.why-era__intro,
-.why-era__outro {
-  font-size: 1.05rem;
-  line-height: 1.75;
-  color: var(--color-text-soft);
-  margin: 0 auto var(--space-unit);
-  width: 100%;
-  max-width: var(--container);
-  text-align: center;
-}
-
-.why-era__outro {
-  margin-top: var(--space-lg);
-  color: var(--color-text);
-  font-size: 1.1rem;
+.why-era__calisma .calisma-alanlari {
+  margin-left: 0;
+  margin-right: 0;
+  max-width: none;
+  padding: 0;
+  gap: 0.4rem;
 }
 
 /* ===== Why Era – Hakkımda ===== */
@@ -642,109 +564,158 @@ main {
   }
 }
 
-/* ===== Çalışma Alanları – sağ menü + içerik ===== */
+/* ===== Çalışma Alanları – üst başlık + sekmeler, yatay manuel slider ===== */
 .calisma-alanlari {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: var(--space-xl);
-  min-height: 60vh;
-  background: var(--color-bg);
-  padding-right: var(--space-xl);
-  max-width: var(--container);
-  margin: 0 auto;
-  padding-left: var(--space-lg);
-}
-
-.calisma-alanlari__content {
-  min-width: 0;
-  overflow: auto;
-}
-
-.calisma-alanlari__content .content-section {
-  margin: 0;
-}
-
-.calisma-alanlari__sidebar {
-  position: sticky;
-  top: calc(var(--header-h) + var(--space-lg));
-  align-self: start;
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
-  padding: var(--space-xxl) 0 var(--space-lg);
-  background: transparent;
+  gap: var(--space-lg);
+  background: var(--color-bg);
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-lg) var(--space-lg);
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.calisma-alanlari__sidebar-title {
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--color-muted);
-  margin-bottom: 0.5rem;
-  padding: 0;
+.calisma-alanlari__header {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+}
+
+.calisma-alanlari__tabs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.3rem 0.5rem;
+  width: 100%;
+  padding-bottom: 0.25rem;
+  margin-bottom: 0;
+  border-bottom: 1px solid var(--color-border);
 }
 
 .calisma-alanlari__btn {
-  display: block;
-  width: 100%;
-  padding: 0.5rem 0;
-  border: none;
-  border-radius: 0;
-  background: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.45rem 0.65rem;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: var(--color-white);
   color: var(--color-text-soft);
-  font-size: 0.95rem;
+  font-size: 0.875rem;
   font-family: var(--font-sans);
-  text-align: left;
+  text-align: center;
   cursor: pointer;
-  text-decoration: underline;
-  text-underline-offset: 0.25em;
-  text-decoration-color: var(--color-border);
-  transition: color 0.2s, text-decoration-color 0.2s;
+  text-decoration: none;
+  transition:
+    color 0.2s,
+    border-color 0.2s,
+    background 0.2s,
+    box-shadow 0.2s;
+  white-space: nowrap;
 }
 
 .calisma-alanlari__btn:hover {
   color: var(--color-text);
-  text-decoration-color: var(--color-muted);
+  border-color: var(--color-border);
+  background: var(--color-bg-alt);
 }
 
 .calisma-alanlari__btn--active {
   color: var(--color-text);
-  font-weight: 500;
-  text-decoration: underline;
-  text-decoration-color: var(--color-accent);
-  text-decoration-thickness: 2px;
+  font-weight: 600;
+  border-color: var(--color-accent);
+  background: var(--color-white);
+  box-shadow: 0 1px 0 0 var(--color-accent);
 }
 
 .calisma-alanlari__btn--active:hover {
-  text-decoration-color: var(--color-text);
+  color: var(--color-text);
+  border-color: var(--color-text);
+}
+
+.calisma-alanlari__slider {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  width: 100%;
+  min-width: 0;
+  min-height: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+  gap: 0;
+  border-radius: var(--radius);
+  outline: none;
+}
+
+.calisma-alanlari__slider:focus-visible {
+  box-shadow: 0 0 0 2px var(--color-white), 0 0 0 4px var(--color-accent);
+}
+
+.calisma-alanlari__slide {
+  flex: 0 0 100%;
+  min-width: 100%;
+  width: 100%;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  box-sizing: border-box;
+}
+
+.calisma-alanlari__slide .content-section {
+  margin: 0;
+  /* Sekmelerle içerik arası boşluğu azalt (varsayılan üst padding büyük) */
+  padding-top: var(--space-lg);
+  padding-bottom: var(--space-xl);
+}
+
+.calisma-alanlari__slider::-webkit-scrollbar {
+  height: 8px;
+}
+
+.calisma-alanlari__slider::-webkit-scrollbar-track {
+  background: var(--color-bg-alt);
+  border-radius: 4px;
+}
+
+.calisma-alanlari__slider::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 4px;
+}
+
+.calisma-alanlari__slider::-webkit-scrollbar-thumb:hover {
+  background: var(--color-muted);
 }
 
 @media (max-width: 900px) {
   .calisma-alanlari {
-    grid-template-columns: 1fr;
-    padding-left: var(--space-lg);
-    padding-right: var(--space-lg);
+    padding: var(--space-lg) var(--space-unit) var(--space-xl);
+    gap: var(--space-unit);
   }
 
-  .calisma-alanlari__sidebar {
-    position: static;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: var(--space-unit) 0;
-    gap: 0.5rem;
+  .why-era__calisma .calisma-alanlari {
+    padding: 0;
+    gap: 0.35rem;
   }
 
-  .calisma-alanlari__sidebar-title {
-    width: 100%;
-    margin-bottom: 0;
+  .calisma-alanlari__tabs {
+    gap: 0.3rem;
   }
 
   .calisma-alanlari__btn {
     flex: 1 1 auto;
-    min-width: 120px;
-    text-align: center;
+    min-width: 0;
+    white-space: normal;
+    font-size: 0.8125rem;
+    padding: 0.4rem 0.5rem;
   }
+
 }
 
 /* ===== Content sections (Depresyon, Travma, Kaygı, OKB, DEHB, Cinsel) ===== */

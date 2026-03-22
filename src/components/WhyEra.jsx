@@ -1,14 +1,7 @@
 import React from 'react';
 import AnimatedSection from './AnimatedSection';
-import { kaygiImg, depresyonImg, hakkimdaImg } from '../assets/imageData';
-
-const CARDS = [
-  { emoji: '✨', title: 'A Safe Healing Era Alanı', desc: 'Yargısız, güvenli ve tamamen size ait bir psikolojik alan.' },
-  { emoji: '🧠', title: 'A Consciousness Era Yaklaşımı', desc: 'Bilimsel terapi yöntemleri ile farkındalık temelli derinlemesine çalışma.' },
-  { emoji: '🔐', title: 'Trust Era: Koşulsuz Gizlilik', desc: 'Her paylaşımınızın güvenle korunduğu etik ve profesyonel sınırlar.' },
-  { emoji: '🌱', title: 'Growth Era Odaklı Terapi', desc: 'Sadece rahatlama değil, kalıcı içsel gelişim ve psikolojik dayanıklılık.' },
-  { emoji: '💬', title: 'Authentic Self Era Deneyimi', desc: 'Maskelerin değil, gerçek benliğinizin konuşabildiği bir süreç.' },
-];
+import { hakkimdaImg } from '../assets/imageData';
+import CalismaAlanlari from './CalismaAlanlari';
 
 function WhyEra() {
   return (
@@ -17,44 +10,10 @@ function WhyEra() {
         <AnimatedSection direction="up">
           <h2 className="why-era__title">Neden Bu Süreç Sizin New Era'nız Olabilir?</h2>
         </AnimatedSection>
-        <div className="why-era__images">
-          <AnimatedSection direction="left" delay={50}>
-            <img src={kaygiImg} alt="" className="why-era__img" />
-          </AnimatedSection>
-          <AnimatedSection direction="right" delay={100}>
-            <img src={depresyonImg} alt="" className="why-era__img" />
-          </AnimatedSection>
+
+        <div className="why-era__calisma">
+          <CalismaAlanlari />
         </div>
-        <div className="why-era__grid">
-          {CARDS.map((card, i) => (
-            <AnimatedSection key={card.title} direction="up" delay={i * 80}>
-              <div className="why-era__card">
-                <span className="why-era__card-emoji">{card.emoji}</span>
-                <h3 className="why-era__card-title">{card.title}</h3>
-                <p className="why-era__card-desc">{card.desc}</p>
-              </div>
-            </AnimatedSection>
-          ))}
-        </div>
-        <AnimatedSection direction="up" delay={200}>
-          <p className="why-era__intro">
-            Kaygı, depresyon, ilişki sorunları, özgüven problemleri, dikkat güçlükleri veya yaşamın getirdiği değişimler…
-            Bunlar bir son değil, çoğu zaman <strong>your transformation era</strong>'nın başlangıcıdır.
-          </p>
-        </AnimatedSection>
-        <AnimatedSection direction="up" delay={250}>
-          <p className="why-era__intro">
-            Belki de uzun süredir güçlü kalmaya çalıştınız.<br />
-            Şimdi biraz da <strong>your gentle era</strong> — kendinize şefkat gösterdiğiniz çağa geçme zamanı.
-          </p>
-        </AnimatedSection>
-        <AnimatedSection direction="up" delay={300}>
-          <p className="why-era__outro">
-            Her değişim bir farkındalıkla başlar.<br />
-            Her farkındalık yeni bir era yaratır.<br />
-            <strong>Ben bu yeni çağınızda size eşlik etmek için buradayım.</strong>
-          </p>
-        </AnimatedSection>
 
         <div className="why-era__about" id="hakkimda">
           <AnimatedSection direction="up" delay={80}>
